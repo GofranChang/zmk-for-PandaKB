@@ -24,7 +24,7 @@
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &kp LALT &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
-                display-name = "LAYER 0";
+                display-name = "default";
                 };
                 number_layer {
 // -----------------------------------------------------------------------------------------
@@ -38,10 +38,10 @@
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
-                display-name = "LAYER 1";
+                display-name = "number";
                 };
 
-                character_layer {
+                function_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -53,7 +53,7 @@
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
-                display-name = "LAYER 2";
+                display-name = "function";
                 };
 
 		program_layer {
@@ -68,7 +68,7 @@
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
-                display-name = "LAYER 3";
+                display-name = "program";
                 };
 
 		macro_layer {
@@ -83,7 +83,7 @@
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
-                display-name = "LAYER 4";
+                display-name = "macro";
                 };
         };
 };
