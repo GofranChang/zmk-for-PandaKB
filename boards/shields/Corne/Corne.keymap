@@ -25,53 +25,52 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | MO4  |
-//                    | GUI | ALT | L1  |   | L2  | MO3 | ALT |
+//                    | GUI | ALT | L1  |   | L2  | RSH | MO3 |
             bindings = <
-   &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y      &kp U   &kp I     &kp O   &kp P    &kp BSPC
-  //  &kp LCTRL &kp A  &kp S  &kp D  &kp F  &kp G      &kp H      &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &hm LCTRL A  &hm LSHFT S  &kp D  &kp F  &kp G      &kp H      &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N      &kp M   &kp COMMA &kp DOT &kp FSLH &mo 4
-                    &kp LGUI &kp LALT &lt 1 SPACE    &lt 2 SPACE &kp RSHFT &mo 3
+   &kp TAB   &kp Q       &kp W       &kp E  &kp R  &kp T      &kp Y       &kp U     &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &hm LCTRL A &hm LSHFT S &kp D  &kp F  &kp G      &kp H       &kp J     &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z       &kp X       &kp C  &kp V  &kp B      &kp N       &kp M     &kp COMMA &kp DOT &kp FSLH &mo 4
+                                     &kp LGUI &kp LALT &lt 1 SPACE &lt 2 SPACE &kp RSHFT &mo 3
             >;
             display-name = "default";
         };
 
         number_layer {
-// -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  | DWN |  UP | RGT |BKSP  |
-// |      |  (  |  [  |  {  |  <  |  -  |   |  _  | LFT | DWN |  UP | RGT |      |
-// |      |  )  |  ]  |  }  |  >  |  +  |   |  =  |     |     |     |     |      |
+// ------------------------------------------------------------------------------------------
+// |   ~  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  |  |
+// |      |  (  |  [  |  {  |  <  |  -  |   |  _  |     |     |     |     |     |
+// |      |  )  |  ]  |  }  |  >  |  +  |   |  =  |     |     |     |     |     |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
             bindings = <
-   &kp TILDE &kp N1   &kp N2   &kp N3   &kp N4  &kp N5      &kp N6    &kp N7   &kp N8   &kp N9    &kp N0    &kp PIPE
-   &trans  &kp LPAR &kp LBKT &kp LBRC &kp LT  &kp MINUS   &kp UNDER &kp LEFT &kp DOWN &kp UP    &kp RIGHT &trans
-   &trans  &kp RPAR &kp RBKT &kp RBRC &kp GT  &kp PLUS    &kp EQUAL &trans   &trans   &trans    &trans    &trans
-                    &kp LGUI &trans   &kp SPACE            &kp RET   &trans   &kp RALT
+   &kp TILDE &kp N1   &kp N2   &kp N3   &kp N4  &kp N5    &kp N6    &kp N7 &kp N8 &kp N9 &kp N0 &kp PIPE
+   &trans    &kp LPAR &kp LBKT &kp LBRC &kp LT  &kp MINUS &kp UNDER &trans &trans &trans &trans &trans
+   &trans    &kp RPAR &kp RBKT &kp RBRC &kp GT  &kp PLUS  &kp EQUAL &trans &trans &trans &trans &trans
+                               &kp LGUI &trans  &kp SPACE &kp RET   &trans &kp RALT
             >;
             display-name = "number";
         };
 
         function_layer {
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT | ENT |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
             bindings = <
-   &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0    &kp BSPC
-   &trans  &trans &trans &trans &trans &trans     &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp ENTER &trans
-   &trans  &trans &trans &trans &trans &trans     &trans   &trans   &trans &trans    &trans    &trans
-                  &kp LGUI &trans &kp SPACE       &kp RET  &trans   &kp RALT
+   &trans       &trans        &kp LC(RIGHT) &trans        &kp END       &trans        &trans        &kp PG_UP     &kp ESC       &trans        &kp HOME      &trans
+   &trans       &trans        &trans        &kp PG_DN     &trans        &trans        &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp ENTER     &trans
+   &trans       &trans        &trans        &trans        &trans        &kp LC(LEFT)  &trans        &trans        &trans        &trans        &trans        &trans
+                              &trans        &trans        &trans        &trans        &trans        &trans
             >;
             display-name = "function";
         };
 
         program_layer {
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -80,13 +79,13 @@
    &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-                  &trans &trans &trans           &trans &trans &trans
+                        &trans &trans &trans    &trans &trans &trans
             >;
             display-name = "program";
         };
 
         macro_layer {
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -95,13 +94,13 @@
    &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
-                  &trans &trans &trans           &trans &trans &mo 5
+                        &trans &trans &trans    &trans &trans &mo 5
             >;
             display-name = "macro";
         };
 
         bluetooth_layer {
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 // | CLR | BT0 | BT1 | BT2 |     |     |   |     |     |     |     |     |      |
 // | TOG | BLE | USB |     |     |     |   |     |     |     |     |     |      |
 // |     |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -110,7 +109,7 @@
    &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans    &trans &trans &trans &trans &trans &trans
    &out OUT_TOG &out OUT_BLE &out OUT_USB  &trans       &trans &trans    &trans &trans &trans &trans &trans &trans
    &trans       &trans       &trans        &trans       &trans &trans    &trans &trans &trans &trans &trans &trans
-                             &trans        &trans       &trans           &trans &trans &trans
+                                           &trans       &trans &trans    &trans &trans &trans
             >;
             display-name = "bluetooth";
         };
