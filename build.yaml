@@ -1,13 +1,13 @@
 include:
 # Corne without dongle 不带dongle的Corne
   # Corne with oled display(with nice_oled module) 适用于带oled的Corne
-  - board: nice_nano_v2 
-    shield: Corne_L nice_oled
-    snippet: studio-rpc-usb-uart 
-    artifact-name: Corne_left_oled
-  - board: nice_nano_v2
-    shield: Corne_R nice_oled
-    artifact-name: Corne_right_oled
+  #- board: nice_nano_v2 
+  # shield: Corne_L nice_oled
+  #  snippet: studio-rpc-usb-uart 
+  #  artifact-name: Corne_left_oled
+  #- board: nice_nano_v2
+  #  shield: Corne_R nice_oled
+  #  artifact-name: Corne_right_oled
   # Corne with nice!view display(with nice_view_custom module) 适用于带nice_view的Corne
   - board: nice_nano_v2
     shield: Corne_L Nice_view_config nice_view_gem
@@ -25,12 +25,12 @@ include:
     snippet: studio-rpc-usb-uart
     artifact-name: Corne_central_dongle
   # peripheral with oled display(with nice_oled module)
-  - board: nice_nano_v2
-    shield: Corne_dongle_left nice_oled
-    artifact-name: Corne_peripheral_left_oled
-  - board: nice_nano_v2
-    shield: Corne_dongle_right nice_oled
-    artifact-name: Corne_peripheral_right_oled   
+  #- board: nice_nano_v2
+  #  shield: Corne_dongle_left nice_oled
+  #  artifact-name: Corne_peripheral_left_oled
+  #- board: nice_nano_v2
+  #  shield: Corne_dongle_right nice_oled
+  #  artifact-name: Corne_peripheral_right_oled   
   # peripheral with nice!view display(with nice_view_custom module)
   - board: nice_nano_v2
     shield: Corne_dongle_left Nice_view_config nice_view_gem
