@@ -19,6 +19,8 @@ manifest:
       url-base: https://github.com/infely
     - name: penguinchat
       url-base: https://github.com/penguinchat
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -49,5 +51,8 @@ manifest:
     - name: zmk-for-PandaKB.com-
       remote: penguinchat
       revision: PandaKB_Lily58
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
   self:
     path: config
