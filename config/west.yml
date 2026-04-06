@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/ph-design
+      url-base: https://github.com/zmkfirmware
   #additional module
     - name: petejohanson
       url-base: https://github.com/petejohanson
@@ -24,7 +24,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3-lts
+      revision: v0.3
       import: app/west.yml
   #additional module
     - name: hammerbeam-slideshow

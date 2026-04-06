@@ -6,18 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-    int
-    default 2
-
-config BT_MAX_CONN
-    int
-    default 5
-
-config BT_MAX_PAIRED
-    int
-    default 5
-
 endif
 
 
@@ -62,6 +50,6 @@ endchoice
 endif
 
 endif
- 
+
 
 
