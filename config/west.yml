@@ -45,14 +45,14 @@ manifest:
     - name: nice-view-battery
       remote: infely
       revision: main
-    - name: zmk-dongle-screen
-      remote: penguinchat
-      revision: Penguinchat-patch-1
+    # - name: zmk-dongle-screen
+    #   remote: penguinchat
+    #   revision: Penguinchat-patch-1
     - name: zmk-for-PandaKB.com-
       remote: penguinchat
       revision: PandaKB_Lily58
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: v0.3
+      revision: v0.3.0
   self:
     path: config
