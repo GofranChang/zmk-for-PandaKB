@@ -1,19 +1,25 @@
 name: Draw ZMK keymaps
+
 on:
-  workflow_dispatch:        # 手动触发
-  push:                     # 自动触发
+  workflow_dispatch:
+  push:
     paths:
       - "boards/shields/**/*.keymap"
       - "boards/shields/**/*.dtsi"
+      - "boards/shields/**/*.overlay"
+      - "miryoku/**/*.h"
+      - "miryoku/**/*.dtsi"
+      - "config/**/*.json"
       - "keymap_drawer.config.yaml"
+      - ".github/workflows/draw.yml"
 
 jobs:
   draw:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
-      contents: write       # 允许提交文件到仓库
+      contents: write
     with:
       keymap_patterns: "boards/shields/Corne_dongle/Corne_dongle.keymap"
       config_path: "keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
-      # west_config_path: "config"
+      west_config_path: "config"
