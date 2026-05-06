@@ -1,0 +1,19 @@
+name: Draw ZMK keymaps
+on:
+  workflow_dispatch:        # 手动触发
+  push:                     # 自动触发
+    paths:
+      - "boards/shields/**/*.keymap"
+      - "boards/shields/**/*.dtsi"
+      - "keymap_drawer.config.yaml"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write       # 允许提交文件到仓库
+    with:
+      keymap_patterns: "boards/shields/Corne_dongle/Corne_dongle.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      # west_config_path: "config"
