@@ -53,6 +53,6 @@ manifest:
       revision: PandaKB_Lily58
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: v0.3
+      revision: v0.3.0
   self:
     path: config

@@ -14,9 +14,6 @@ if SHIELD_CORNE_DONGLE_LEFT ||SHIELD_CORNE_DONGLE_CENTRAL || SHIELD_CORNE_DONGLE
 config ZMK_SPLIT
     default y
 
-endif
-
-if SHIELD_CORNE_DONGLE_LEFT || SHIELD_CORNE_DONGLE_RIGHT
 
 if ZMK_DISPLAY
 
@@ -48,6 +45,16 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif
+
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT
 
 endif
 
