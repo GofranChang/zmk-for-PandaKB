@@ -1,0 +1,10 @@
+/* The trackpad occupies the display socket. */
+/ {
+    chosen {
+        /delete-property/ zephyr,display;
+    };
+};
+
+&oled {
+    status = "disabled";
+};

@@ -1,0 +1,5 @@
+config SHIELD_PANDA_CIRQUE_I2C
+    def_bool $(shields_list_contains,panda_cirque_i2c)
+
+config SHIELD_PANDA_CIRQUE_I2C_PERIPHERAL
+    def_bool $(shields_list_contains,panda_cirque_i2c_peripheral)

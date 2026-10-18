@@ -1,0 +1,44 @@
+/* Reuse the PandaKB nice!view socket as I2C + data-ready.
+ * SDA = MOSI/P0.17, SCL = SCK/P0.20, DR = CS/P0.08.
+ * Do not combine this shield with Nice_view_config or nice_view_custom.
+ */
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/i2c/i2c.h>
+#include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
+
+&spi0 {
+    status = "disabled";
+};
+
+&pinctrl {
+    cirque_i2c_default: cirque_i2c_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+        };
+    };
+
+    cirque_i2c_sleep: cirque_i2c_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            low-power-enable;
+        };
+    };
+};
+
+&pro_micro_i2c {
+    status = "okay";
+    compatible = "nordic,nrf-twi";
+    clock-frequency = <I2C_BITRATE_STANDARD>;
+    pinctrl-0 = <&cirque_i2c_default>;
+    pinctrl-1 = <&cirque_i2c_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    cirque: trackpad@2a {
+        compatible = "cirque,pinnacle";
+        status = "okay";
+        reg = <0x2a>;
+        dr-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+    };
+};

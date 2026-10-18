@@ -39,5 +39,20 @@ include:
     shield: Corne_dongle_right Nice_view_config nice_view_custom
     artifact-name: Corne_peripheral_right_nice_view
  
+
+# Cirque I2C on the nice!view socket (one trackpad per keyboard).
+# See docs/cirque-i2c.md for wiring and matching receiver firmware.
+  - board: nice_nano_v2
+    shield: Corne_L panda_cirque_i2c
+    snippet: studio-rpc-usb-uart
+    artifact-name: Corne_left_cirque_i2c
+  - board: nice_nano_v2
+    shield: Corne_dongle_left panda_cirque_i2c_peripheral
+    artifact-name: Corne_peripheral_left_cirque_i2c
+  - board: nice_nano_v2
+    shield: Corne_dongle_central dongle_display panda_cirque_receiver
+    snippet: studio-rpc-usb-uart
+    artifact-name: Corne_central_dongle_cirque_receiver
+
   - board: nice_nano_v2
     shield: settings_reset

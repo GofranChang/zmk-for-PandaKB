@@ -1,0 +1,15 @@
+/* Trackpad on a peripheral half; forward events on split channel 0. */
+#include "panda_cirque_display_off.dtsi"
+
+/ {
+    cirque_splits {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        cirque_split: input@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+            device = <&cirque>;
+        };
+    };
+};

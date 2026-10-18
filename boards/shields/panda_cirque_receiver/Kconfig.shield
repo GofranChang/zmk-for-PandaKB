@@ -1,0 +1,2 @@
+config SHIELD_PANDA_CIRQUE_RECEIVER
+    def_bool $(shields_list_contains,panda_cirque_receiver)

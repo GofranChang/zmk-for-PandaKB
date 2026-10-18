@@ -1,0 +1,6 @@
+file_format: "1"
+id: panda_cirque_receiver
+name: PandaKB Cirque split receiver
+type: shield
+url: https://github.com/GofranChang/zmk-for-PandaKB
+features: [pointer]

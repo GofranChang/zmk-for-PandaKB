@@ -1,0 +1,10 @@
+file_format: "1"
+id: panda_cirque_i2c
+name: PandaKB Cirque I2C adapter
+type: shield
+url: https://github.com/GofranChang/zmk-for-PandaKB
+requires: [pro_micro]
+features: [pointer]
+siblings:
+  - panda_cirque_i2c
+  - panda_cirque_i2c_peripheral

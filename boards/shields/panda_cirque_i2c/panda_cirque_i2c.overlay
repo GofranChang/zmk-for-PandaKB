@@ -1,0 +1,9 @@
+/* Local trackpad on the non-dongle left/central half. */
+#include "panda_cirque_display_off.dtsi"
+
+/ {
+    cirque_listener: cirque_listener {
+        compatible = "zmk,input-listener";
+        device = <&cirque>;
+    };
+};

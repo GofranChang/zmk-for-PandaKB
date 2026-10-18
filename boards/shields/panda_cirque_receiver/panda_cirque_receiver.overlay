@@ -1,0 +1,17 @@
+/* Add to the left/central half or dongle when Cirque is on a peripheral. */
+/ {
+    cirque_splits {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        cirque_split: input@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    cirque_listener: cirque_listener {
+        compatible = "zmk,input-listener";
+        device = <&cirque_split>;
+    };
+};

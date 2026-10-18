@@ -54,5 +54,9 @@ manifest:
     - name: zmk-dongle-display
       remote: englmaxi
       revision: v0.3.0
+    # External Pinnacle driver for ZMK v0.3 / Zephyr 3.5.
+    - name: cirque-input-module
+      remote: petejohanson
+      revision: 0de55f36bc720b5be3d8880dc856d4d78baf5214
   self:
     path: config
