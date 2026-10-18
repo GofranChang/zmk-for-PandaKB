@@ -11,7 +11,6 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
-        // zmk,backlight = &backlight;  
     };
     mock_kscan: kscan_1 {
         compatible = "zmk,kscan-mock";
@@ -46,7 +45,7 @@
 	oled: sh1106@3c {
         compatible = "sinowealth,sh1106";
         reg = <0x3c>;
-        width = <129>;
+        width = <128>;
         height = <64>;
         segment-offset = <2>;
         page-offset = <0>;
